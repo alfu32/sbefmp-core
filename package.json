@@ -1,16 +1,35 @@
 {
-  "name": "@sbefmp/core",
+  "name": "@alfu32org/core",
   "version": "1.0.0",
   "description": "react components base",
   "main": "./bundles/core.umd.js",
   "typings": "./core.d.ts",
   "author": "alfu32",
-  "repository": "https://github.com/alfu32/sbefmp-core.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alfu32/sbefmp-core.git"
+  },
   "license": "MIT",
   "private": false,
   "devDependencies": {
     "react": "~16.8.6",
     "react-dom": "~16.8.6",
     "rxjs": "~6.5.2"
+  },
+  "bugs": {
+    "url": "https://github.com/alfu32/sbefmp-core/issues"
+  },
+  "homepage": "https://github.com/alfu32/sbefmp-core#readme",
+  "dependencies": {
+    "prop-types": "^15.7.2",
+    "js-tokens": "^4.0.0",
+    "loose-envify": "^1.4.0",
+    "object-assign": "^4.1.1",
+    "react-is": "^16.8.6",
+    "tslib": "^1.9.3",
+    "scheduler": "^0.13.6"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
