@@ -1,4 +1,5 @@
 {
+  "$schema":"http://json.schemastore.org/package",
   "name": "@sbefmp/core",
   "version": "1.0.0",
   "description": "react components base",
@@ -9,27 +10,32 @@
     "type": "git",
     "url": "git+https://github.com/alfu32/sbefmp-core.git"
   },
+  "scripts" : {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json"
+  },
   "license": "MIT",
   "private": false,
   "devDependencies": {
     "react": "~16.8.6",
     "react-dom": "~16.8.6",
-    "rxjs": "~6.5.2"
+    "rxjs": "~6.5.2",
+    "typescript": "^3.4.5",
+    "js-tokens": "^4.0.0",
+    "loose-envify": "^1.4.0",
+    "object-assign": "^4.1.1",
+    "prop-types": "^15.7.2",
+    "react-is": "^16.8.6",
+    "scheduler": "^0.13.6",
+    "tslib": "^1.9.3",
+    "tslint": "^5.16.0",
+    "tslint-config-prettier": "^1.18.0"
   },
   "bugs": {
     "url": "https://github.com/alfu32/sbefmp-core/issues"
   },
   "homepage": "https://github.com/alfu32/sbefmp-core#readme",
   "dependencies": {
-    "prop-types": "^15.7.2",
-    "js-tokens": "^4.0.0",
-    "loose-envify": "^1.4.0",
-    "object-assign": "^4.1.1",
-    "react-is": "^16.8.6",
-    "tslib": "^1.9.3",
-    "scheduler": "^0.13.6"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
