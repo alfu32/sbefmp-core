@@ -1,0 +1,115 @@
+@import './_geometry';
+@import './_color';
+
+.app-layout>{
+  position: relative;
+  .app-title{
+    //border: 1px solid #a00;
+    background: $titleColor;
+    @extend %protobox;
+    top: $margin;
+    left: $margin;
+    @extend %fixHeight;
+    @extend %fixWidth;
+    .layout-button{
+      display: inline-block;
+      background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjxzdmcKICAgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIgogICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIgogICB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiCiAgIHhtbG5zOnN2Zz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgaWQ9InN2ZzgiCiAgIHZlcnNpb249IjEuMSIKICAgdmlld0JveD0iMCAwIDE2LjkzMzMzMyAxNi45MzMzMzQiCiAgIGhlaWdodD0iNjQiCiAgIHdpZHRoPSI2NCI+CiAgPGRlZnMKICAgICBpZD0iZGVmczIiIC8+CiAgPG1ldGFkYXRhCiAgICAgaWQ9Im1ldGFkYXRhNSI+CiAgICA8cmRmOlJERj4KICAgICAgPGNjOldvcmsKICAgICAgICAgcmRmOmFib3V0PSIiPgogICAgICAgIDxkYzpmb3JtYXQ+aW1hZ2Uvc3ZnK3htbDwvZGM6Zm9ybWF0PgogICAgICAgIDxkYzp0eXBlCiAgICAgICAgICAgcmRmOnJlc291cmNlPSJodHRwOi8vcHVybC5vcmcvZGMvZGNtaXR5cGUvU3RpbGxJbWFnZSIgLz4KICAgICAgICA8ZGM6dGl0bGU+PC9kYzp0aXRsZT4KICAgICAgPC9jYzpXb3JrPgogICAgPC9yZGY6UkRGPgogIDwvbWV0YWRhdGE+CiAgPGcKICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLC0yODAuMDY2NjUpIgogICAgIGlkPSJsYXllcjEiPgogICAgPHBhdGgKICAgICAgIGlkPSJwYXRoNDQ4NyIKICAgICAgIGQ9Ik0gMy4xNzUsMjg1LjM1ODMyIEggMTMuNzU4MzMzIgogICAgICAgc3R5bGU9ImZpbGw6bm9uZTtzdHJva2U6IzAwMDAwMDtzdHJva2Utd2lkdGg6MS41ODc1O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1vcGFjaXR5OjE7c3Ryb2tlLW1pdGVybGltaXQ6NDtzdHJva2UtZGFzaGFycmF5Om5vbmUiIC8+CiAgICA8cGF0aAogICAgICAgc3R5bGU9ImZpbGw6bm9uZTtzdHJva2U6IzAwMDAwMDtzdHJva2Utd2lkdGg6MS41ODc0OTk5ODtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2UtbWl0ZXJsaW1pdDo0O3N0cm9rZS1kYXNoYXJyYXk6bm9uZTtzdHJva2Utb3BhY2l0eToxIgogICAgICAgZD0iTSAzLjE3NSwyODguNTMzMzQgSCAxMy43NTgzMzMiCiAgICAgICBpZD0icGF0aDQ0ODkiIC8+CiAgICA8cGF0aAogICAgICAgaWQ9InBhdGg0NDkxIgogICAgICAgZD0iTSAzLjE3NSwyOTEuNzA4MzYgSCAxMy43NTgzMzMiCiAgICAgICBzdHlsZT0iZmlsbDpub25lO3N0cm9rZTojMDAwMDAwO3N0cm9rZS13aWR0aDoxLjU4NzQ5OTk4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1taXRlcmxpbWl0OjQ7c3Ryb2tlLWRhc2hhcnJheTpub25lO3N0cm9rZS1vcGFjaXR5OjEiIC8+CiAgPC9nPgo8L3N2Zz4K');
+      background-repeat: no-repeat;
+      background-size: $toolbarHeight * 3 / 5;
+      background-position: 50% 50%;
+      min-width: $toolbarHeight;
+      min-height: $toolbarHeight;
+      cursor: pointer;
+      vertical-align: top;
+    }
+    .layout-button:hover{
+      background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhLS0gQ3JlYXRlZCB3aXRoIElua3NjYXBlIChodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy8pIC0tPgoKPHN2ZwogICB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iCiAgIHhtbG5zOmNjPSJodHRwOi8vY3JlYXRpdmVjb21tb25zLm9yZy9ucyMiCiAgIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyIKICAgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIgogICB4bWxuczpzb2RpcG9kaT0iaHR0cDovL3NvZGlwb2RpLnNvdXJjZWZvcmdlLm5ldC9EVEQvc29kaXBvZGktMC5kdGQiCiAgIHhtbG5zOmlua3NjYXBlPSJodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy9uYW1lc3BhY2VzL2lua3NjYXBlIgogICB3aWR0aD0iNjQiCiAgIGhlaWdodD0iNjQiCiAgIHZpZXdCb3g9IjAgMCAxNi45MzMzMzMgMTYuOTMzMzM0IgogICB2ZXJzaW9uPSIxLjEiCiAgIGlkPSJzdmc4IgogICBpbmtzY2FwZTp2ZXJzaW9uPSIwLjkyLjEgcjE1MzcxIgogICBzb2RpcG9kaTpkb2NuYW1lPSJtZW51LWJ0bi13aGl0ZS5zdmciCiAgIGlua3NjYXBlOmV4cG9ydC1maWxlbmFtZT0iQzpcRGV2bG9wXG1lbnUtYnRuLnBuZyIKICAgaW5rc2NhcGU6ZXhwb3J0LXhkcGk9IjIwNCIKICAgaW5rc2NhcGU6ZXhwb3J0LXlkcGk9IjIwNCI+CiAgPGRlZnMKICAgICBpZD0iZGVmczIiIC8+CiAgPHNvZGlwb2RpOm5hbWVkdmlldwogICAgIGlkPSJiYXNlIgogICAgIHBhZ2Vjb2xvcj0iI2ZmZmZmZiIKICAgICBib3JkZXJjb2xvcj0iIzY2NjY2NiIKICAgICBib3JkZXJvcGFjaXR5PSIxLjAiCiAgICAgaW5rc2NhcGU6cGFnZW9wYWNpdHk9IjAuMCIKICAgICBpbmtzY2FwZTpwYWdlc2hhZG93PSIyIgogICAgIGlua3NjYXBlOnpvb209IjExLjIiCiAgICAgaW5rc2NhcGU6Y3g9IjM4Ljk1MTM3MyIKICAgICBpbmtzY2FwZTpjeT0iMzEuMDc4MzQ0IgogICAgIGlua3NjYXBlOmRvY3VtZW50LXVuaXRzPSJtbSIKICAgICBpbmtzY2FwZTpjdXJyZW50LWxheWVyPSJsYXllcjEiCiAgICAgc2hvd2dyaWQ9InRydWUiCiAgICAgdW5pdHM9InB4IgogICAgIGlua3NjYXBlOndpbmRvdy13aWR0aD0iMTkyMCIKICAgICBpbmtzY2FwZTp3aW5kb3ctaGVpZ2h0PSIxMDEzIgogICAgIGlua3NjYXBlOndpbmRvdy14PSItOSIKICAgICBpbmtzY2FwZTp3aW5kb3cteT0iLTkiCiAgICAgaW5rc2NhcGU6d2luZG93LW1heGltaXplZD0iMSI+CiAgICA8aW5rc2NhcGU6Z3JpZAogICAgICAgdHlwZT0ieHlncmlkIgogICAgICAgaWQ9ImdyaWQ0NDg1IgogICAgICAgc3BhY2luZ3g9IjEuMDU4MzMzMyIKICAgICAgIHNwYWNpbmd5PSIxLjA1ODMzMzMiIC8+CiAgPC9zb2RpcG9kaTpuYW1lZHZpZXc+CiAgPG1ldGFkYXRhCiAgICAgaWQ9Im1ldGFkYXRhNSI+CiAgICA8cmRmOlJERj4KICAgICAgPGNjOldvcmsKICAgICAgICAgcmRmOmFib3V0PSIiPgogICAgICAgIDxkYzpmb3JtYXQ+aW1hZ2Uvc3ZnK3htbDwvZGM6Zm9ybWF0PgogICAgICAgIDxkYzp0eXBlCiAgICAgICAgICAgcmRmOnJlc291cmNlPSJodHRwOi8vcHVybC5vcmcvZGMvZGNtaXR5cGUvU3RpbGxJbWFnZSIgLz4KICAgICAgICA8ZGM6dGl0bGU+PC9kYzp0aXRsZT4KICAgICAgPC9jYzpXb3JrPgogICAgPC9yZGY6UkRGPgogIDwvbWV0YWRhdGE+CiAgPGcKICAgICBpbmtzY2FwZTpsYWJlbD0iTGF5ZXIgMSIKICAgICBpbmtzY2FwZTpncm91cG1vZGU9ImxheWVyIgogICAgIGlkPSJsYXllcjEiCiAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCwtMjgwLjA2NjY1KSI+CiAgICA8cGF0aAogICAgICAgc3R5bGU9ImZpbGw6bm9uZTtzdHJva2U6I2ZmZmZmZjtzdHJva2Utd2lkdGg6MS41ODc1O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1vcGFjaXR5OjE7c3Ryb2tlLW1pdGVybGltaXQ6NDtzdHJva2UtZGFzaGFycmF5Om5vbmUiCiAgICAgICBkPSJNIDMuMTc1LDI4NS4zNTgzMiBIIDEzLjc1ODMzMyIKICAgICAgIGlkPSJwYXRoNDQ4NyIKICAgICAgIGlua3NjYXBlOmNvbm5lY3Rvci1jdXJ2YXR1cmU9IjAiIC8+CiAgICA8cGF0aAogICAgICAgaW5rc2NhcGU6Y29ubmVjdG9yLWN1cnZhdHVyZT0iMCIKICAgICAgIGlkPSJwYXRoNDQ4OSIKICAgICAgIGQ9Ik0gMy4xNzUsMjg4LjUzMzM0IEggMTMuNzU4MzMzIgogICAgICAgc3R5bGU9ImZpbGw6bm9uZTtzdHJva2U6I2ZmZmZmZjtzdHJva2Utd2lkdGg6MS41ODc0OTk5ODtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2UtbWl0ZXJsaW1pdDo0O3N0cm9rZS1kYXNoYXJyYXk6bm9uZTtzdHJva2Utb3BhY2l0eToxIiAvPgogICAgPHBhdGgKICAgICAgIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlOiNmZmZmZmY7c3Ryb2tlLXdpZHRoOjEuNTg3NDk5OTg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW1pdGVybGltaXQ6NDtzdHJva2UtZGFzaGFycmF5Om5vbmU7c3Ryb2tlLW9wYWNpdHk6MSIKICAgICAgIGQ9Ik0gMy4xNzUsMjkxLjcwODM2IEggMTMuNzU4MzMzIgogICAgICAgaWQ9InBhdGg0NDkxIgogICAgICAgaW5rc2NhcGU6Y29ubmVjdG9yLWN1cnZhdHVyZT0iMCIgLz4KICA8L2c+Cjwvc3ZnPgo=');
+      background-color: $baseHighlightColor;
+    }
+  }
+  .app-sidebar{
+    //border: 1px solid #aa0;
+    background: $sidebarColor;
+    @extend %protobox;
+    top: 2*$margin + $toolbarHeight;
+    left: $margin;
+    @extend %fixWidth;
+    bottom: 2*$margin + $toolbarHeight;
+    overflow: hidden;
+    border-right: 1px solid $titleColor;
+  }
+  .app-toolbar{
+    //border: 1px solid #0a0;
+    background: $toolbarColor;
+    @extend %protobox;
+    top: $margin;
+    left: 2*$margin + $sideWidth;
+    right: $margin;
+    @extend %fixHeight;
+    overflow: hidden;
+  }
+  .app-content{
+    //border: 1px solid #0aa;
+    @extend %protobox;
+    top: 2*$margin + $toolbarHeight;
+    left: 2*$margin + $sideWidth;
+    bottom: 2*$margin + $toolbarHeight;
+    right: $margin;
+    overflow-y: auto;
+  }
+  .app-statusbar{
+    //border: 1px solid #00a;
+    background: $statusbarColor;
+    @extend %protobox;
+    left: $margin;
+    right: $margin;
+    bottom: $margin;
+    @extend %fixHeight;
+    overflow: hidden;
+  }
+}
+.app-layout[sidebar-collapsed='true']>{
+  .app-title{
+    left: $margin;
+    @extend %fixMinWidth;
+  }
+  .app-sidebar{
+    left: $margin;
+    @extend %zeroMinWidth;
+    bottom: 2*$margin + $toolbarHeight;
+  }
+  .app-toolbar{
+    left: 2*$margin + $sideMinWidth;
+  }
+  .app-content{
+    top: 2*$margin + $toolbarHeight;
+    left: $margin;
+    bottom: 2*$margin + $toolbarHeight;
+    right: $margin;
+  }
+}
+.app-layout[content-scroll='outside']>{
+  .app-title{
+    left: $margin;
+    .layout-button{
+      background-size: $toolbarMinHeight * 4 / 5;
+      min-width: $toolbarMinHeight;
+      min-height: $toolbarMinHeight;
+    }
+    @extend %fixMinHeight;
+  }
+  .app-sidebar{
+    top: 2*$margin + $toolbarMinHeight;
+    bottom: 2*$margin + $toolbarMinHeight;
+  }
+  .app-content{
+    top: 2*$margin + $toolbarMinHeight;
+    bottom: 2*$margin + $toolbarMinHeight;
+  }
+  .app-toolbar{
+    @extend %fixMinHeight;
+  }
+  .app-statusbar{
+    @extend %fixMinHeight;
+  }
+}

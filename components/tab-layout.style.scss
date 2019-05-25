@@ -1,0 +1,41 @@
+@import './_geometry';
+@import './_color';
+
+.tabs-layout{
+  position: relative;
+  min-height: 2 * $toolbarHeight;
+  .tabs-titles{
+    position: absolute;
+    padding: $padding;
+    padding-bottom: 12px + $padding;
+    top:0px;
+    left: 0px;
+    right: 32px;
+    max-height: $toolbarHeight;
+    white-space: nowrap;
+    overflow-x: hidden;
+
+    .tab-title{
+      display: inline-block;
+      padding: 20px $sideMinWidth 20px $toolbarMinHeight;
+      border-bottom:5px solid #00000062;
+      background-color: $sidebarColor;
+      cursor: pointer;
+      /*border-radius: 12px 12px 0px 0px;*/
+      box-shadow: -5px 0px 5px #00000064
+    }
+    .tab-title:hover {
+      border-color: $baseHighlightColor;
+    }
+    .tab-title[tab-selected='true']{
+      background-color: $titleColor;
+    }
+  }
+  .tabs-contents{
+    position: absolute;
+    top: $toolbarHeight + $margin +2 * $padding +12px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+  }
+}

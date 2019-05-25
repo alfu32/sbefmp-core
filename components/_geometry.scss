@@ -1,0 +1,37 @@
+$margin: 0px;
+$padding: 12px;
+$sideWidth: 400px;
+$sideMinWidth: 64px;
+$toolbarMinHeight: 32px;
+$toolbarHeight: 64px;
+
+%fixWidth{
+    width: $sideWidth;
+    max-width: $sideWidth;
+    min-width: $sideWidth;
+}
+%fixMinWidth{
+    width: $sideMinWidth;
+    max-width: $sideMinWidth;
+    min-width: $sideMinWidth;
+}
+%zeroMinWidth{
+    width: 0px;
+    max-width: 0px;
+    min-width: 0px;
+}
+%fixHeight{
+    height: $toolbarHeight;
+    max-height: $toolbarHeight;
+    min-height: $toolbarHeight;
+}
+%fixMinHeight{
+    height: $toolbarMinHeight;
+    max-height: $toolbarMinHeight;
+    min-height: $toolbarMinHeight;
+}
+%protobox{
+  position: absolute;
+  transition: all ease-in 0.1s;
+  box-sizing: border-box;
+}

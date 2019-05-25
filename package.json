@@ -1,0 +1,16 @@
+{
+  "name": "@sbefmp/core",
+  "version": "1.0.0",
+  "description": "react components base",
+  "main": "./bundles/core.umd.js",
+  "typings": "./core.d.ts",
+  "author": "alfu32",
+  "repository": "https://github.com/alfu32/sbefmp-core.git",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "react": "~16.8.6",
+    "react-dom": "~16.8.6",
+    "rxjs": "~6.5.2"
+  }
+}
