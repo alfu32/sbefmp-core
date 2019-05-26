@@ -15,11 +15,7 @@
     "pkg:format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "pkg:build": "parcel build src/index.ts --global @sbefmp/core",
     "pkg:lint": "tslint -p tsconfig.json",
-<<<<<<< HEAD
-    "pkg:publish": "yarn publish --access public"
-=======
     "pkg:publish": "npm publish --access public"
->>>>>>> 3c46ef0620b6c24b801bd9252a60f950e8de23c2
   },
   "license": "MIT",
   "private": false,
