@@ -1,10 +1,10 @@
 {
   "$schema": "http://json.schemastore.org/package",
   "name": "@sbefmp/core",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "react components base",
-  "main": "./dist/index.js",
-  "typings": "./index.d.ts",
+  "main": "./bundles/core.umd.js",
+  "typings": "./core.d.ts",
   "author": "alfu32",
   "repository": {
     "type": "git",
