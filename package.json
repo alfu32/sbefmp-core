@@ -14,7 +14,8 @@
     "pkg:test": "echo \"Error: no test specified\" && exit 1",
     "pkg:format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "pkg:build": "parcel build src/index.ts --global @sbefmp/core",
-    "pkg:lint": "tslint -p tsconfig.json"
+    "pkg:lint": "tslint -p tsconfig.json",
+    "pkg:publish": "npm publish --access public"
   },
   "license": "MIT",
   "private": false,
