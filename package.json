@@ -11,10 +11,10 @@
     "url": "git+https://github.com/alfu32/sbefmp-core.git"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
-    "build": "parcel build src/index.ts --global @sbefmp/core",
-    "lint": "tslint -p tsconfig.json"
+    "pkg:test": "echo \"Error: no test specified\" && exit 1",
+    "pkg:format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "pkg:build": "parcel build src/index.ts --global @sbefmp/core",
+    "pkg:lint": "tslint -p tsconfig.json"
   },
   "license": "MIT",
   "private": false,
