@@ -3,8 +3,8 @@
   "name": "@sbefmp/core",
   "version": "1.0.5",
   "description": "react components base",
-  "main": "./bundles/core.umd.js",
-  "typings": "./core.d.ts",
+  "main": "./dist/index.js",
+  "typings": "./index.d.ts",
   "author": "alfu32",
   "repository": {
     "type": "git",
