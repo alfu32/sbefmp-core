@@ -1,23 +1,23 @@
 
 import { id,guid } from './utils';
-import { Observable,Subject } from 'rxjs';
+import { Observable,Subject, OperatorFunction } from 'rxjs';
 import React , { Component,createRef } from 'react';
-function waitPropsReady(instance,timeout=1000){
-  return new Promise(function(resolve,reject){
-    (function poll(){
-      if(typeof(instance["props"])!=="undefined"){
-        resolve(instance);
-      }else{
-
-        if(timeout-->0){
-          setTimeout(poll,1);
-        }else{
-          reject({instance,error:"timed out"});
-        }
-      }
-    })();
-  })
-}
+///////////  function waitPropsReady(instance,timeout=1000){
+///////////    return new Promise(function(resolve,reject){
+///////////      (function poll(){
+///////////        if(typeof(instance["props"])!=="undefined"){
+///////////          resolve(instance);
+///////////        }else{
+///////////  
+///////////          if(timeout-->0){
+///////////            setTimeout(poll,1);
+///////////          }else{
+///////////            reject({instance,error:"timed out"});
+///////////          }
+///////////        }
+///////////      })();
+///////////    })
+///////////  }
 
 export class EventPipeDirective extends Component{
   render(){
@@ -26,31 +26,31 @@ export class EventPipeDirective extends Component{
 }
 
 export function Pipe<T>( ... pipeargs: Observable<any>[]){
-  return function(instance,_selector,descriptor){
+  return (instance: any, _selector: string, descriptor: object) => {
     
     instance[_selector] = new MulticastEventObservable( ...pipeargs );
-    //console.log( "pipe", pipeargs );
+    // console.log( "pipe", pipeargs );
     console.log( "pipe on", instance.constructor.name, pipeargs.map( f => f ) );
-    /*delegateFn(instance[_selector],_selector);*/
-    //console.log( "EventEmitter",{instance,_selector} );
+    /* delegateFn(instance[_selector],_selector);*/
+    // console.log( "EventEmitter",{instance,_selector} );
   }
 }
 export function EventEmitter<T>( ... pipeargs: Observable<any>[]){
-  return function(instance,_selector,descriptor){
+  return (instance: any, _selector: string, descriptor: object) => {
 
     instance[_selector] = new MulticastEventObservable( ...pipeargs );
-    //console.log( "pipe", pipeargs );
+    // console.log( "pipe", pipeargs );
     console.log( "pipe on", instance.constructor.name, pipeargs.map( f => f ) );
     /*delegateFn(instance[_selector],_selector);*/
-    //console.log( "EventEmitter",{instance,_selector} );
+    // console.log( "EventEmitter",{instance,_selector} );
   }
 }
 export const NodeRef = ()=>{
-  return function(instance,_selector){
+  return (instance: any, _selector: string, descriptor: object) => {
     instance[_selector] = createRef();
     console.log("NodeRef",instance,_selector,instance[_selector]);
     /*delegateFn(instance[_selector],_selector);*/
-    //console.log( "EventEmitter",{instance,_selector} );
+    // console.log( "EventEmitter",{instance,_selector} );
   }
 }
 console.log("NodeRef",NodeRef);
@@ -74,13 +74,14 @@ export function SingleEventObservable(){
 */
 
 export class SingleEventObservable<T> extends Observable<T>{
-  private _observer;
-  constructor( ... _pipe ){
+  private _observer: any;
+  constructor(..._pipe: OperatorFunction<T, {}>[] ){
     super((observer) => {
     this._observer=observer;
+    const s=this;
       return {
         unsubscribe(){
-          this.observers=this.observers.filter( o => o!==observer )
+          s._observer = null; // this._observer.filter( o => o!==observer )
         }
       }
     });
@@ -91,14 +92,14 @@ export class SingleEventObservable<T> extends Observable<T>{
   }
 }
 export class SingleEventObservable2{
-  private _observable;
-  private _observer;
+  private _observable:any;
+  private _observer:any;
   constructor( ... _pipe:Observable<any>[] ){
     this._observable = new Observable((observer) => {
       this._observer = observer;
       return {
         unsubscribe(){
-          this.observers=this.observers.filter( o => o!==observer )
+          // this.observers=this.observers.filter( o => o!==observer )
         }
       }
     }).pipe( ... _pipe );

@@ -15,7 +15,13 @@
     "pkg:format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "pkg:build": "parcel build src/index.ts --global @sbefmp/core",
     "pkg:lint": "tslint -p tsconfig.json",
-    "pkg:publish": "yarn publish --access public"
+    "pkg:publish": "yarn publish --access public",
+    "build": "npm run build:es2015 && npm run build:esm && npm run build:cjs && npm run build:umd && npm run build:umd:min",
+    "build:es2015": "tsc --module es2015 --target es2015 --outDir dist/es2015",
+    "build:esm": "tsc --module es2015 --target es5 --outDir dist/esm",
+    "build:cjs": "tsc --module commonjs --target es5 --outDir dist/cjs",
+    "build:umd": "rollup dist/esm/index.js --format umd --name SbefmpCore --sourceMap --output dist/umd/sbefmp.core.js",
+    "build:umd:min": "cd dist/umd && uglifyjs --compress --mangle --source-map --screw-ie8 --comments --o sbefmp.core.min.js -- sbefmp.core.js && gzip sbefmp.core.min.js -c > sbefmp.core.min.js.gz"
   },
   "license": "MIT",
   "private": false,
@@ -41,5 +47,7 @@
     "url": "https://github.com/alfu32/sbefmp-core/issues"
   },
   "homepage": "https://github.com/alfu32/sbefmp-core#readme",
-  "dependencies": {}
+  "dependencies": {
+    "@types/react": "^16.8.18"
+  }
 }

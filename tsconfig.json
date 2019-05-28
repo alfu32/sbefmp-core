@@ -15,5 +15,11 @@
         "strict": true,
         "moduleResolution": "node",
         "esModuleInterop": true
-    }
+    },
+    "exclude":[
+        "node_module",
+        "./dist",
+        "index.d.ts",
+        "index.ts"
+    ]
 }
