@@ -30,6 +30,11 @@
   resolved "https://registry.yarnpkg.com/@flatten-js/interval-tree/-/interval-tree-1.0.6.tgz#ad9ca1bb0631245ffd9532390d1ea7e86afec5fb"
   integrity sha512-BTI9AwaiJdh+Ewt3XjgwSeb0Un0OoULOUTHE4Fo93SYYgVo5PGzqD047rFVW4GhI7j9iDCbHq4B4VWyqDlarDw==
 
+"@sbefmp/core@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@sbefmp/core/-/core-1.0.1.tgz#4c03759ff9e411d4fb6f189ab0a42691319d1f72"
+  integrity sha512-MpmQ5ZhTDVBJ1kXxk8uYmXsV/I0rxwbVj7FZdFe2ozFiKrOvRvBBhy7qooZ0v7fojUc2eXUCkumtGoqijxhnoA==
+
 "@types/q@^1.5.1":
   version "1.5.2"
   resolved "https://registry.yarnpkg.com/@types/q/-/q-1.5.2.tgz#690a1475b84f2a884fd07cd797c00f5f31356ea8"
