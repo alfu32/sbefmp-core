@@ -3,7 +3,7 @@
   "name": "@sbefmp/core",
   "version": "1.0.6",
   "description": "react components base",
-  "main": "./dist/index.js",
+  "main": "./index.ts",
   "typings": "./index.d.ts",
   "author": "alfu32",
   "repository": {
