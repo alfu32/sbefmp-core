@@ -1,6 +1,6 @@
 
 import { id,guid } from './utils';
-import { Observable,Subject, OperatorFunction } from 'rxjs';
+import { Observable,Subject, OperatorFunction, Subscriber } from 'rxjs';
 import React , { Component,createRef } from 'react';
 ///////////  function waitPropsReady(instance,timeout=1000){
 ///////////    return new Promise(function(resolve,reject){
@@ -104,7 +104,7 @@ export class SingleEventObservable2{
       }
     }).pipe( ... _pipe );
   }
-  subscribe(s){
+  subscribe(s: Subscriber<any>){
     this._observable.subscribe(s);
   }
   notify(event){
